@@ -1,0 +1,257 @@
+body {
+    background: url('background.jpg');
+    background-size: no-repeat;
+}
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.chris {
+    color: white;
+}
+
+/* Thanh điều hướng */
+nav {
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu chính */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b400; /* Màu vàng khi hover */
+}
+
+/* Menu hamburger (ẩn trên desktop) */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.menu .home {
+    border: none;
+    padding: 0;
+    position: fixed;
+    top: 0px;
+    left: 20px;
+}
+
+.menu .home img {
+    width: 50px; /* Kích thước ảnh */
+    height: 50px;
+    border-radius: 50%; /* Làm ảnh tròn (tuỳ chọn) */
+    transition: transform 0.3s;
+}
+
+.menu .home img:hover {
+    transform: scale(1.1); /* Phóng to khi di chuột */
+}
+
+.menu .home img:active {
+    transform: scale(0.9); /* Thu nhỏ khi nhấn */
+}
+
+/* Header */
+.hero {
+    background: url('chess-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero p {
+    font-size: 18px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Giới thiệu */
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.intro img {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Lợi ích */
+.benefits {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Kỳ thủ vĩ đại */
+.legends {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.players {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.player {
+    max-width: 300px;
+    text-align: center;
+}
+
+.player img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.player h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.5); /* Lớp phủ đen 50% */
+    padding: 20px;
+    color: white;
+}
+
+body {
+    background-color: #F5F5DC;
+    color: #333; /* Đổi màu chữ thành xám đậm để dễ đọc hơn */
+}
+
+.submenu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li a {
+    color: black;
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Hiện submenu khi hover */
+.dropdown:hover .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+#dropdown ul.submenu{
+    position: absolute;
+    background-color: #131921;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+}
+
+#dropdown ul.submenu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #434343;
+}
+
+#dropdown ul.submenu li:last-child a{
+    border: 5;
+}
+
